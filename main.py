@@ -20,21 +20,14 @@ def calculate_area(rfile, wfile, thresh):
     area = cv2.contourArea(contours[0])
 
     print(area/1000000)
-    # print("***********")
 
-    # num = 0
-
-    # for i in threshold:
-    #     if i > thresh:
-    #         num += 1
-    # print(num)
 
     #save file
     cv2.imwrite(wfile, threshold)
 
 
 #pombe
-calculate_area('pombe.jpeg', './contours/pombe-contour.jpg', 120)
-calculate_area('ecoli.jpg', './contours/ecoli-contour.jpg', 130)
+calculate_area('./images/pombe.jpeg', './contours/pombe-contour.jpg', 120)
+calculate_area('./images/yeast.jpg', './contours/yeast-contour.jpg', 130)
 
 # 7e-4 cm2/pixel
